@@ -1,0 +1,21 @@
+/*
+Theme Name: Sam Villegas Official Portfolio Theme
+Author: Samuel Villegas
+Author URI: https://portfolioSamVillegas.com
+Description: This is a theme developed for my own web developer portfolio.
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.7
+Requires PHP: 7.0
+License: 
+License URI: 
+Text Domain: samvillegasportfoliotheme
+*/
+
+@import "partials/variables/variables";
+@import "partials/mixins";
+@import "partials/typography";
+@import "partials/media";
+@import "partials/header";
+@import "partials/layout";
+@import "partials/footer";

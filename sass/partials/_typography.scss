@@ -1,0 +1,15 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include neonShadowText;
+    font-family: $font_header;
+    color: $color_header_text;
+}
+
+body {
+    font-family: $font_body;
+    color: $color_body_text;
+}
