@@ -29,6 +29,7 @@ function a7SamuelVillegas_scripts_styles(){
 add_action('wp_enqueue_scripts', 'a7SamuelVillegas_scripts_styles');
 
 
+
 function portfolioTheme(){
    $defaults = array(
       'height' => 400,
