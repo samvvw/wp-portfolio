@@ -9,6 +9,7 @@
 <body <?php body_class();?>>
     <header>
         <div class="logos-wrapper">
+            <span id="over-line"></span>
             <div class="logo-svg-wrapper" >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.72 28.83">
                     <defs>
@@ -68,7 +69,6 @@
                     </g>
                 </svg>
             </div>
-            
             <div class="logo-wrapper-custom">
                 <h1>
                     <?php 
@@ -93,27 +93,27 @@
         <div class="main-menu-wrapper">
             <i class="fas fa-times" id="close-menu-btn"></i>
             <?php
-        wp_nav_menu( array(
-            'theme_location' => 'menu-main',
-            'container' => 'nav',
-            'container_class' => 'menu-main-container',
-            'menu_class' => 'main-menu'
-            
-        ));
-        ?>
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-main',
+                    'container' => 'nav',
+                    'container_class' => 'menu-main-container',
+                    'menu_class' => 'main-menu'
+                    
+                ));
+            ?>
             <?php
-        wp_nav_menu( array(
-            'theme_location' => 'menu-social',
-            'container' => 'div',
-            'container_class' => 'menu-container header-social-menu',
-            'menu_class' => 'social-menu',
-            'link_before' => '<span class="visually-hidden">',
-            'link_after' => '</span>'
-            
-        ));
-        ?>
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-social',
+                    'container' => 'div',
+                    'container_class' => 'menu-container header-social-menu',
+                    'menu_class' => 'social-menu',
+                    'link_before' => '<span class="visually-hidden">',
+                    'link_after' => '</span>'
+                    
+                ));
+            ?>
         </div>
     </header>
-<!-- content area -->
-<div class="content-area" id="primary"> 
-    <main id="main" class="site-main">
+    <!-- content area -->
+    <div class="content-area" id="primary"> 
+        <main id="main" class="site-main">

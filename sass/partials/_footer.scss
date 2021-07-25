@@ -1,0 +1,17 @@
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  .menu-container {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 140px;
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

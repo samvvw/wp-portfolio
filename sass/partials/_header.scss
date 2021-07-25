@@ -1,26 +1,45 @@
 header {
   // Logo styling
+
+  background-color: $color_header_bg;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 3rem 1rem;
   .logos-wrapper {
     position: relative;
     flex-grow: 1;
-    max-width: 256px;
+    max-width: 257px;
     height: 37px;
   }
+  #over-line {
+    display: block;
+    max-width: 80%;
+    height: 1px;
+    background-color: $over_line_color;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    @include neonShadowBox;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+  }
   .logo-svg-wrapper {
+    position: absolute;
     max-width: 236px;
+    left: 0;
   }
   .logo-wrapper-custom {
     height: 100%;
     h1 {
       //   max-width: 406px;
-      position: absolute;
       //   top: 0;
-      left: 0;
       font-family: Consolas;
       font-style: normal;
       font-weight: normal;
-      font-size: 32px;
-      line-height: 37px;
+      font-size: 34px;
+      line-height: 29px;
       /* identical to box height */
 
       letter-spacing: 0.08em;
@@ -32,6 +51,7 @@ header {
   }
   // End Logo styling
 
+  // Menu Styling Mobile
   display: flex;
   justify-content: space-between;
 
@@ -45,7 +65,7 @@ header {
 
   .main-menu-wrapper {
     transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -105,14 +125,71 @@ header {
 
   .menu-open {
     transform: translateX(0);
+    transition: transform 250ms ease-in-out;
   }
 
-  // Menu Styling
+  .menu-close {
+    transition: transform 250ms ease-in-out;
+  }
 
-  // End Menu Styling
+  // End Menu Styling Mobile
+
+  //  Menu Styling Tablet
   @media screen and (min-width: $bp_tablet) {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
     .hamburger-menu {
       display: none;
     }
+    .main-menu-wrapper {
+      transform: initial;
+      transition: none;
+      position: static;
+      max-width: 50%;
+      background-color: initial;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 999999;
+      padding: 0 0;
+      clip-path: none;
+      flex-grow: 1;
+      i {
+        display: none;
+      }
+      .menu-main-container {
+        margin-top: 1rem;
+        width: 90%;
+        ul {
+          height: 100%;
+          list-style: none;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .header-social-menu {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 20%;
+        ul {
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+      a {
+        color: $color_body_text;
+        text-decoration: none;
+        @include neonShadowText;
+      }
+    }
   }
+  //  End Menu Styling Tablet
 }

@@ -11,7 +11,6 @@ if (
     window.location.search.length <= 0) ||
   window.location.pathname === '/'
 ) {
-  console.log(window.location.search.length);
   logos.forEach((logo, i) => {
     logo.style.strokeDasharray = `${pathLs[i]}px`;
     logo.style.strokeDashoffset = `${pathLs[i]}px`;
@@ -29,7 +28,6 @@ logos.forEach((logo) => {
 
 function setStroke(percentage, index) {
   const stroke = pathLs[index] - (percentage / 100) * pathLs[index];
-  console.log(stroke);
   return stroke;
 }
 window.addEventListener('load', () => {
@@ -43,6 +41,7 @@ window.addEventListener('load', () => {
     }, 300 * i);
   });
   const svgWrapper = document.querySelector('.logo-svg-wrapper');
+  const spanLine = document.querySelector('#over-line');
   const customLogoWrapper = document.querySelector('.logo-wrapper-custom h1');
   const delay = 6500;
   setTimeout(() => {
@@ -59,13 +58,16 @@ window.addEventListener('load', () => {
     svgWrapper.style.opacity = 1;
   }, delay + 500);
   setTimeout(() => {
-    svgWrapper.style.opacity = 0;
+    svgWrapper.style.opacity = 0.5;
+    spanLine.style.opacity = 1;
   }, delay + 600);
   setTimeout(() => {
     svgWrapper.style.opacity = 1;
+    spanLine.style.opacity = 0.5;
   }, delay + 700);
   setTimeout(() => {
     svgWrapper.style.opacity = 0;
+    spanLine.style.opacity = 1;
   }, delay + 900);
   setTimeout(() => {
     svgWrapper.style.display = 'none';
