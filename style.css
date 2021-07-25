@@ -23,7 +23,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1 a {
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   font-family: "Consolas";
   color: #a7f2eb;
@@ -93,23 +94,27 @@ img {
 }
 
 header {
-  background-color: #161d22;
+  background-color: #090d0f;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  padding: 3rem 1rem;
+}
+
+header .header-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0;
   display: flex;
   justify-content: space-between;
 }
-header .logos-wrapper {
+header .header-wrapper .logos-wrapper {
   position: relative;
   flex-grow: 1;
   max-width: 257px;
   height: 37px;
 }
-header #over-line {
+header .header-wrapper #over-line {
   display: block;
   max-width: 80%;
   height: 1px;
@@ -120,15 +125,20 @@ header #over-line {
   opacity: 0;
   transition: opacity 100ms ease-in-out;
 }
-header .logo-svg-wrapper {
+header .header-wrapper .site-tagline {
+  opacity: 0;
+  color: #f2f2f2;
+  transition: opacity 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55), text-shadow 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+header .header-wrapper .logo-svg-wrapper {
   position: absolute;
   max-width: 236px;
   left: 0;
 }
-header .logo-wrapper-custom {
+header .header-wrapper .logo-wrapper-custom {
   height: 100%;
 }
-header .logo-wrapper-custom h1 {
+header .header-wrapper .logo-wrapper-custom h1 {
   font-family: Consolas;
   font-style: normal;
   font-weight: normal;
@@ -141,21 +151,24 @@ header .logo-wrapper-custom h1 {
   transition: opacity 250ms ease-in-out;
   opacity: 0;
 }
-header .hamburger-menu {
+header .header-wrapper .logo-wrapper-custom h1 a {
+  text-decoration: none;
+}
+header .header-wrapper .hamburger-menu {
   cursor: pointer;
   color: #f2f2f2;
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   font-size: 1.6rem;
   margin-right: 1rem;
 }
-header .main-menu-wrapper {
+header .header-wrapper .main-menu-wrapper {
   transform: translateX(100%);
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #161d22e8;
+  background-color: #090d0fe8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +177,7 @@ header .main-menu-wrapper {
   padding: 10rem 0;
   clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 35.1% 87.75%, 11.47% 72.27%);
 }
-header .main-menu-wrapper i {
+header .header-wrapper .main-menu-wrapper i {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -173,10 +186,10 @@ header .main-menu-wrapper i {
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   cursor: pointer;
 }
-header .main-menu-wrapper .menu-main-container {
+header .header-wrapper .main-menu-wrapper .menu-main-container {
   height: 40%;
 }
-header .main-menu-wrapper .menu-main-container ul {
+header .header-wrapper .main-menu-wrapper .menu-main-container ul {
   height: 100%;
   list-style: none;
   text-align: center;
@@ -185,37 +198,37 @@ header .main-menu-wrapper .menu-main-container ul {
   align-items: center;
   justify-content: space-around;
 }
-header .main-menu-wrapper .menu-main-container ul a {
+header .header-wrapper .main-menu-wrapper .menu-main-container ul a {
   font-size: 1.5rem;
 }
-header .main-menu-wrapper .header-social-menu {
+header .header-wrapper .main-menu-wrapper .header-social-menu {
   width: 30%;
 }
-header .main-menu-wrapper .header-social-menu ul {
+header .header-wrapper .main-menu-wrapper .header-social-menu ul {
   display: flex;
   justify-content: space-around;
 }
-header .main-menu-wrapper a {
+header .header-wrapper .main-menu-wrapper a {
   color: #f2f2f2;
   text-decoration: none;
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
 }
-header .menu-open {
+header .header-wrapper .menu-open {
   transform: translateX(0);
   transition: transform 250ms ease-in-out;
 }
-header .menu-close {
+header .header-wrapper .menu-close {
   transition: transform 250ms ease-in-out;
 }
 @media screen and (min-width: 700px) {
-  header {
-    padding: 4rem 2rem;
+  header .header-wrapper {
+    padding: 4rem 0;
     margin-bottom: 2rem;
   }
-  header .hamburger-menu {
+  header .header-wrapper .hamburger-menu {
     display: none;
   }
-  header .main-menu-wrapper {
+  header .header-wrapper .main-menu-wrapper {
     transform: initial;
     transition: none;
     position: static;
@@ -230,14 +243,14 @@ header .menu-close {
     clip-path: none;
     flex-grow: 1;
   }
-  header .main-menu-wrapper i {
+  header .header-wrapper .main-menu-wrapper i {
     display: none;
   }
-  header .main-menu-wrapper .menu-main-container {
+  header .header-wrapper .main-menu-wrapper .menu-main-container {
     margin-top: 1rem;
     width: 90%;
   }
-  header .main-menu-wrapper .menu-main-container ul {
+  header .header-wrapper .main-menu-wrapper .menu-main-container ul {
     height: 100%;
     list-style: none;
     text-align: center;
@@ -246,29 +259,71 @@ header .menu-close {
     align-items: center;
     justify-content: space-around;
   }
-  header .main-menu-wrapper .menu-main-container ul a {
+  header .header-wrapper .main-menu-wrapper .menu-main-container ul a {
     font-size: 1.2rem;
   }
-  header .main-menu-wrapper .header-social-menu {
+  header .header-wrapper .main-menu-wrapper .header-social-menu {
     position: absolute;
     top: 5px;
     right: 5px;
     width: 20%;
   }
-  header .main-menu-wrapper .header-social-menu ul {
+  header .header-wrapper .main-menu-wrapper .header-social-menu ul {
     display: flex;
     justify-content: space-around;
   }
-  header .main-menu-wrapper a {
+  header .header-wrapper .main-menu-wrapper a {
     color: #f2f2f2;
     text-decoration: none;
     text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   }
 }
+@media screen and (min-width: 1000px) {
+  header .header-wrapper {
+    width: 80%;
+  }
+  header .header-wrapper .main-menu-wrapper {
+    max-width: 40%;
+  }
+  header .header-wrapper .main-menu-wrapper .header-social-menu {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .header-wrapper {
+    width: 75%;
+  }
+  header .header-wrapper .main-menu-wrapper {
+    max-width: 35%;
+  }
+  header .header-wrapper .main-menu-wrapper .header-social-menu {
+    width: 10%;
+  }
+}
 
 body {
-  background: #161d22;
+  background: #090d0f;
   min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 700px) {
+  main {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  main {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main {
+    width: 75%;
+  }
 }
 
 footer {
