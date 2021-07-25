@@ -1,6 +1,118 @@
-.author-bio {
-}
+header {
+  // Logo styling
+  .logos-wrapper {
+    position: relative;
+    flex-grow: 1;
+    max-width: 256px;
+    height: 37px;
+  }
+  .logo-svg-wrapper {
+    max-width: 236px;
+  }
+  .logo-wrapper-custom {
+    height: 100%;
+    h1 {
+      //   max-width: 406px;
+      position: absolute;
+      //   top: 0;
+      left: 0;
+      font-family: Consolas;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 37px;
+      /* identical to box height */
 
-.logo-wrapper {
-    max-width: 60px;
+      letter-spacing: 0.08em;
+      margin: 0;
+      bottom: 5px;
+      transition: opacity 250ms ease-in-out;
+      opacity: 0;
+    }
+  }
+  // End Logo styling
+
+  display: flex;
+  justify-content: space-between;
+
+  .hamburger-menu {
+    cursor: pointer;
+    color: $color_body_text;
+    @include neonShadowText;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+  }
+
+  .main-menu-wrapper {
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $color_backdrop_bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 999999;
+    padding: 10rem 0;
+    clip-path: polygon(
+      0px 0px,
+      100% 0px,
+      100% 100%,
+      35.1% 87.75%,
+      11.47% 72.27%
+    );
+    i {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 1.8rem;
+      color: $color_body_text;
+      @include neonShadowText;
+      cursor: pointer;
+    }
+    .menu-main-container {
+      height: 40%;
+      ul {
+        height: 100%;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .header-social-menu {
+      width: 30%;
+      ul {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    a {
+      color: $color_body_text;
+      text-decoration: none;
+      @include neonShadowText;
+    }
+  }
+
+  .menu-open {
+    transform: translateX(0);
+  }
+
+  // Menu Styling
+
+  // End Menu Styling
+  @media screen and (min-width: $bp_tablet) {
+    .hamburger-menu {
+      display: none;
+    }
+  }
 }

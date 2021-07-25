@@ -1,23 +1,74 @@
-const logo = document.querySelector(".logo-wrapper path");
+const logos = document.querySelectorAll('.logo-svg-wrapper path');
 
-console.log(logo.getTotalLength());
-const pathL = logo.getTotalLength();
+const pathLs = [];
 
-logo.style.strokeDasharray = `${pathL}px`;
-logo.style.strokeDashoffset = `${pathL}px`;
-logo.style.fill = `transparent`;
-logo.style.stroke = `white`;
-logo.style.strokeWidth = `4px`;
+logos.forEach((logo) => {
+  pathLs.push(logo.getTotalLength());
+});
 
-function setStroke(percentage) {
-    const stroke = pathL - (percentage / 100) * pathL;
-    console.log(stroke);
-    return stroke;
+if (
+  (window.location.pathname === '/PortfolioSamVillegas/' &&
+    window.location.search.length <= 0) ||
+  window.location.pathname === '/'
+) {
+  console.log(window.location.search.length);
+  logos.forEach((logo, i) => {
+    logo.style.strokeDasharray = `${pathLs[i]}px`;
+    logo.style.strokeDashoffset = `${pathLs[i]}px`;
+    logo.style.fill = `transparent`;
+  });
+} else {
+  logos.forEach((logo) => {
+    logo.style.fill = '#A7F2EB';
+  });
 }
-window.addEventListener("load", () => {
-    logo.style.transition =
-        "stroke-dashoffset 3s cubic-bezier(.34,-1.61,.55,1.83) 0s, fill 2s ease-in-out 2s, stroke-dasharray 3s ease-out 1s";
-    logo.style.fill = "#A7F2EB";
-    logo.style.strokeDasharray = "0";
-    logo.style.strokeDashoffset = `${setStroke(100)}px`;
+logos.forEach((logo) => {
+  logo.style.stroke = `white`;
+  logo.style.strokeWidth = `1px`;
+});
+
+function setStroke(percentage, index) {
+  const stroke = pathLs[index] - (percentage / 100) * pathLs[index];
+  console.log(stroke);
+  return stroke;
+}
+window.addEventListener('load', () => {
+  logos.forEach((logo, i) => {
+    setTimeout(() => {
+      logo.style.transition =
+        'stroke-dashoffset 2s cubic-bezier(.34,-1.61,.55,1.83) 0s, fill 2s ease-in-out 2s, stroke-dasharray 3s ease-out 1s, opacity 1s ease-out';
+      logo.style.fill = '#A7F2EB';
+      // logo.style.strokeDasharray = '0';
+      logo.style.strokeDashoffset = `${setStroke(100, i)}px`;
+    }, 300 * i);
+  });
+  const svgWrapper = document.querySelector('.logo-svg-wrapper');
+  const customLogoWrapper = document.querySelector('.logo-wrapper-custom h1');
+  const delay = 6500;
+  setTimeout(() => {
+    svgWrapper.style.transition = 'opacity .01s ease-out';
+    svgWrapper.style.opacity = 0;
+  }, delay);
+  setTimeout(() => {
+    svgWrapper.style.opacity = 1;
+  }, delay + 200);
+  setTimeout(() => {
+    svgWrapper.style.opacity = 0.5;
+  }, delay + 400);
+  setTimeout(() => {
+    svgWrapper.style.opacity = 1;
+  }, delay + 500);
+  setTimeout(() => {
+    svgWrapper.style.opacity = 0;
+  }, delay + 600);
+  setTimeout(() => {
+    svgWrapper.style.opacity = 1;
+  }, delay + 700);
+  setTimeout(() => {
+    svgWrapper.style.opacity = 0;
+  }, delay + 900);
+  setTimeout(() => {
+    svgWrapper.style.display = 'none';
+    customLogoWrapper.style.opacity = 1;
+  }, delay + 950);
 });

@@ -12,10 +12,13 @@ License URI:
 Text Domain: samvillegasportfoliotheme
 */
 
-@import "partials/variables/variables";
-@import "partials/mixins";
-@import "partials/typography";
-@import "partials/media";
-@import "partials/header";
-@import "partials/layout";
-@import "partials/footer";
+@import 'partials/variables/variables';
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'partials/typography';
+@import 'partials/accessibility';
+@import 'partials/media';
+@import 'partials/social-menu';
+@import 'partials/header';
+@import 'partials/layout';
+@import 'partials/footer';
