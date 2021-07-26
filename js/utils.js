@@ -14,7 +14,7 @@ if (
   logos.forEach((logo, i) => {
     logo.style.strokeDasharray = `${pathLs[i]}px`;
     logo.style.strokeDashoffset = `${pathLs[i]}px`;
-    // logo.style.fill = `transparent`;
+    logo.style.fill = `transparent`;
   });
 } else {
   logos.forEach((logo) => {
@@ -66,8 +66,7 @@ window.addEventListener('load', () => {
     const siteTagline = document.querySelector('.site-tagline');
     const spanLine = document.querySelector('#over-line');
     const customLogoWrapper = document.querySelector('.logo-wrapper-custom h1');
-    // window.mobileCheck() ? 500 :
-    const delay = 3500;
+    const delay = window.mobileCheck() ? 500 : 3500;
     setTimeout(() => {
       svgWrapper.style.transition = 'opacity .01s ease-out';
       svgWrapper.style.opacity = 0;
@@ -95,16 +94,17 @@ window.addEventListener('load', () => {
     }, delay + 700);
     setTimeout(() => {
       svgWrapper.style.opacity = 0;
-      svgWrapper.style.opacity = 0;
       spanLine.style.opacity = 1;
       siteTagline.style.opacity = 0.9;
     }, delay + 900);
     setTimeout(() => {
-      // svgWrapper.style.display = 'none';
-      svgWrapper.style.opacity = 1;
+      svgWrapper.style.display = 'none';
       customLogoWrapper.style.opacity = 1;
       siteTagline.style.opacity = 1;
       siteTagline.style.textShadow = 'none';
+      spanLine.innerHTML = `${
+        CSS.supports('transition', 'stroke-dasharray') + 'dasharray'
+      }  ${CSS.supports('transition', 'stroke-dasoffset') + 'dasoffset'}`;
     }, delay + 950);
   } else {
     const svgWrapper = document.querySelector('.logo-svg-wrapper');
