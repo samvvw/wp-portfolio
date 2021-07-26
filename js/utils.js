@@ -30,6 +30,7 @@ function setStroke(percentage, index) {
   const stroke = pathLs[index] - (percentage / 100) * pathLs[index];
   return stroke;
 }
+
 window.mobileCheck = function () {
   let check = false;
   (function (a) {
@@ -101,6 +102,9 @@ window.addEventListener('load', () => {
       customLogoWrapper.style.opacity = 1;
       siteTagline.style.opacity = 1;
       siteTagline.style.textShadow = 'none';
+      spanLine.innerHTML = `${
+        CSS.supports('transition', 'stroke-dasharray') + 'dasharray'
+      }`;
     }, delay + 950);
   } else {
     const svgWrapper = document.querySelector('.logo-svg-wrapper');
@@ -111,5 +115,10 @@ window.addEventListener('load', () => {
     customLogoWrapper.style.opacity = 1;
     siteTagline.style.opacity = 1;
     spanLine.style.opacity = 1;
+    spanLine.innerHTML = `${
+      CSS.supports('transition', 'stroke-dasharray') + 'dasharray'
+    }`;
   }
 });
+
+console.log(CSS.supports('transition', 'stroke-dasharray') + 'dasharray');
