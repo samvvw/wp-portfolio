@@ -111,7 +111,7 @@ header .header-wrapper {
 header .header-wrapper .logos-wrapper {
   position: relative;
   flex-grow: 1;
-  max-width: 257px;
+  max-width: 278px;
   height: 37px;
 }
 header .header-wrapper #over-line {
@@ -139,7 +139,6 @@ header .header-wrapper .logo-wrapper-custom {
   height: 100%;
 }
 header .header-wrapper .logo-wrapper-custom h1 {
-  font-family: Consolas;
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
