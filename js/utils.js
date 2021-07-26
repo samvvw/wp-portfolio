@@ -14,7 +14,7 @@ if (
   logos.forEach((logo, i) => {
     logo.style.strokeDasharray = `${pathLs[i]}px`;
     logo.style.strokeDashoffset = `${pathLs[i]}px`;
-    logo.style.fill = `transparent`;
+    // logo.style.fill = `transparent`;
   });
 } else {
   logos.forEach((logo) => {
