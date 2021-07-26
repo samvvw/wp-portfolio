@@ -119,30 +119,7 @@
                 ?>
             </div>
         </div>
-        <svg width="50" height="42" viewBox="0 0 50 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_dd)">
-<path d="M11 19.5C10.1716 19.5 9.5 20.1716 9.5 21C9.5 21.8284 10.1716 22.5 11 22.5L11 19.5ZM40.0607 22.0607C40.6464 21.4749 40.6464 20.5251 40.0607 19.9393L30.5147 10.3934C29.9289 9.80761 28.9792 9.80761 28.3934 10.3934C27.8076 10.9792 27.8076 11.9289 28.3934 12.5147L36.8787 21L28.3934 29.4853C27.8076 30.0711 27.8076 31.0208 28.3934 31.6066C28.9792 32.1924 29.9289 32.1924 30.5147 31.6066L40.0607 22.0607ZM11 22.5L39 22.5L39 19.5L11 19.5L11 22.5Z" fill="#9FD8F1"/>
-</g>
-<defs>
-<filter id="filter0_dd" x="0.5" y="0.954102" width="49" height="40.0919" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="3.5"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.94902 0 0 0 0 0.94902 0 0 0 0 0.94902 0 0 0 0.53 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect2_dropShadow"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="2"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.654902 0 0 0 0 0.94902 0 0 0 0 0.921569 0 0 0 1 0"/>
-<feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
-</filter>
-</defs>
-</svg>
-
+        
     </header>
     <!-- content area -->
     <div class="content-area" id="primary"> 
