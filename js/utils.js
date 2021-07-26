@@ -65,7 +65,8 @@ window.addEventListener('load', () => {
     const siteTagline = document.querySelector('.site-tagline');
     const spanLine = document.querySelector('#over-line');
     const customLogoWrapper = document.querySelector('.logo-wrapper-custom h1');
-    const delay = window.mobileCheck() ? 500 : 3500;
+    // window.mobileCheck() ? 500 :
+    const delay = 3500;
     setTimeout(() => {
       svgWrapper.style.transition = 'opacity .01s ease-out';
       svgWrapper.style.opacity = 0;
