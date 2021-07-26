@@ -16,6 +16,7 @@ header .header-wrapper {
     flex-grow: 1;
     max-width: 367px;
     height: 37px;
+    z-index: 9999999;
   }
   #over-line {
     display: block;

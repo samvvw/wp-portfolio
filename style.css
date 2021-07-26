@@ -113,6 +113,7 @@ header .header-wrapper .logos-wrapper {
   flex-grow: 1;
   max-width: 367px;
   height: 37px;
+  z-index: 9999999;
 }
 header .header-wrapper #over-line {
   display: block;
