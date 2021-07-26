@@ -21,7 +21,7 @@ endif;
 ?>
 
 
-<section>
+<section class="skill-section-wrapper">
     <h2>Technologies</h2>
     <?php
         wp_nav_menu( array(
@@ -32,6 +32,8 @@ endif;
             
         ));
     ?>
+
+
 </section>
 <h2>My Projects</h2>
 <?php
