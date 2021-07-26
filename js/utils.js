@@ -104,9 +104,12 @@ window.addEventListener('load', () => {
     }, delay + 950);
   } else {
     const svgWrapper = document.querySelector('.logo-svg-wrapper');
+    const siteTagline = document.querySelector('.site-tagline');
+    const spanLine = document.querySelector('#over-line');
     const customLogoWrapper = document.querySelector('.logo-wrapper-custom h1');
     svgWrapper.style.display = 'none';
     customLogoWrapper.style.opacity = 1;
     siteTagline.style.opacity = 1;
+    spanLine.style.opacity = 1;
   }
 });
