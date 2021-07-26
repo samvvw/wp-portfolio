@@ -104,7 +104,7 @@ window.addEventListener('load', () => {
       siteTagline.style.textShadow = 'none';
       spanLine.innerHTML = `${
         CSS.supports('transition', 'stroke-dasharray') + 'dasharray'
-      }`;
+      }  ${CSS.supports('transition', 'stroke-dasoffset') + 'dasoffset'}`;
     }, delay + 950);
   } else {
     const svgWrapper = document.querySelector('.logo-svg-wrapper');
