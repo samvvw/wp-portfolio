@@ -112,7 +112,6 @@ header .header-wrapper .logos-wrapper {
   position: relative;
   flex-grow: 1;
   max-width: 367px;
-  height: 37px;
 }
 header .header-wrapper #over-line {
   display: block;
@@ -134,9 +133,6 @@ header .header-wrapper .logo-svg-wrapper {
   position: absolute;
   max-width: 236px;
   left: 0;
-}
-header .header-wrapper .logo-wrapper-custom {
-  height: 100%;
 }
 header .header-wrapper .logo-wrapper-custom h1 {
   font-style: normal;
