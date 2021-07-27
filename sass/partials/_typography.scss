@@ -8,6 +8,7 @@ h1 a {
   @include neonShadowText;
   font-family: $font_header;
   color: $color_header_text;
+  font-weight: normal;
 }
 
 body {
