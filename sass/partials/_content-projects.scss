@@ -1,0 +1,100 @@
+.home .projects-section-wrapper {
+  .porfolio-project {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: auto 3rem;
+    gap: 8px;
+    .project-description {
+      position: relative;
+      padding: 1.5rem 1rem;
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      p {
+        width: 90%;
+        margin-left: auto;
+      }
+      .project-links {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 3.5rem;
+        top: 1rem;
+        right: 1rem;
+        a {
+          font-size: 1.5rem;
+          color: $color_body_text;
+          @include neonShadowText;
+        }
+      }
+    }
+    .project-tags {
+      grid-column: 1 / span 2;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      margin: 2rem auto;
+      a {
+        background-color: $color_tag_bg;
+        text-decoration: none;
+        color: $color_tag;
+        border-radius: 3px;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+  .entry-thumbnail img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  hr {
+    grid-column: 1 / span 2;
+
+    width: 80%;
+    height: 1px;
+    color: $over_line_color;
+    background-color: $over_line_color;
+    margin: 2rem auto 8rem auto;
+
+    @include neonShadowBox;
+  }
+}
+
+.projects-section-wrapper a[href^='https://linkedin.com']::before
+{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Brands';
+  content: '\f0e1';
+  text-decoration: none;
+}
+
+.projects-section-wrapper a[href^='https://twitter.com']::before
+{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Brands';
+  content: '\f099';
+  text-decoration: none;
+}
+
+.projects-section-wrapper a[href^='https://github.com']::before
+{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Brands';
+  content: '\f113';
+  text-decoration: none;
+}

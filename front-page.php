@@ -35,24 +35,27 @@ endif;
 
 
 </section>
-<h2>My Projects</h2>
-<?php
+<div class="projects-section-wrapper">
+
+    <h2>My Projects</h2>
+    <?php
 $portfolio_project_query = new WP_Query(
     array(
         'post_type' => 'porfolio-project',
         'posts_per_page' => '3',
-    )
-);
-
-if ( $portfolio_project_query -> have_posts() ) :
-    while ( $portfolio_project_query -> have_posts() ) :
-        $portfolio_project_query -> the_post();
-        get_template_part('template-parts/content-projects');
-    endwhile;
-else :
-    get_template_part('template-parts/content-none.php');
-endif;
-?>
+        )
+    );
+    
+    if ( $portfolio_project_query -> have_posts() ) :
+        while ( $portfolio_project_query -> have_posts() ) :
+            $portfolio_project_query -> the_post();
+            get_template_part('template-parts/content-projects');
+        endwhile;
+        else :
+            get_template_part('template-parts/content-none.php');
+        endif;
+        ?>
+</div>
 <?php
 get_footer();
 ?>
