@@ -1,4 +1,9 @@
 .home .projects-section-wrapper {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  margin: 8rem 3rem;
   .porfolio-project {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
@@ -7,23 +12,25 @@
     .project-description {
       position: relative;
       padding: 1.5rem 1rem;
-      h2 {
+      h3 {
         margin-bottom: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       p {
+        padding-top: 2rem;
         width: 90%;
-        margin-left: auto;
+        margin: auto;
+        font-size: 1.2rem;
       }
       .project-links {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        width: 3.5rem;
+        width: 4.5rem;
         top: 1rem;
         right: 1rem;
         a {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
           color: $color_body_text;
           @include neonShadowText;
         }
@@ -46,8 +53,12 @@
       }
     }
   }
+  .entry-thumbnail {
+    text-align: center;
+  }
   .entry-thumbnail img {
-    max-width: 100%;
+    margin: auto;
+    max-width: 90%;
     border-radius: 5px;
   }
   hr {

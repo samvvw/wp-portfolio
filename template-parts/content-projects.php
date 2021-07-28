@@ -1,12 +1,12 @@
 <?php ?>
-<section <?php post_class();?>>
+<article <?php post_class();?>>
 
   <div class="project-description">
 <div class="project-name">
-  <h2 >
+  <h3 >
 
     <?php the_field('project_name');?>
-  </h2>
+  </h3>
 </div>
   <p >
     <?php the_field('project_description');?>
@@ -27,4 +27,4 @@
 
 </div>
 <hr>
-</section>
+</article>

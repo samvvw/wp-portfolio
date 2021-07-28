@@ -35,7 +35,7 @@ endif;
 
 
 </section>
-<div class="projects-section-wrapper">
+<section class="projects-section-wrapper">
 
     <h2>My Projects</h2>
     <?php
@@ -55,7 +55,7 @@ $portfolio_project_query = new WP_Query(
             get_template_part('template-parts/content-none.php');
         endif;
         ?>
-</div>
+</section>
 <?php
 get_footer();
 ?>
