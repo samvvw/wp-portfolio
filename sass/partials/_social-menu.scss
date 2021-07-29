@@ -19,6 +19,17 @@
   text-decoration: none;
 }
 
+.social-menu a[href$='.surge.sh']::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Brands';
+  content: '\f2d0';
+  text-decoration: none;
+}
+
 .social-menu a[href^='https://twitter.com']::before
 {
   display: inline-block;
