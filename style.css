@@ -416,25 +416,37 @@ main {
   }
 }
 
-.home .projects-section-wrapper h2 {
+.archive .archive-title {
+  font-size: 0;
+}
+.archive .archive-title span {
+  font-size: 2rem;
+}
+
+.home .projects-section-wrapper h2,
+.archive .projects-section-wrapper h2 {
   font-size: 1.7rem;
   margin-left: 1rem;
   margin-bottom: 2rem;
 }
-.home .projects-section-wrapper .porfolio-project .project-description {
+.home .projects-section-wrapper .porfolio-project .project-description,
+.archive .projects-section-wrapper .porfolio-project .project-description {
   position: relative;
   padding: 1.5rem 1rem;
 }
-.home .projects-section-wrapper .porfolio-project .project-description h3 {
+.home .projects-section-wrapper .porfolio-project .project-description h3,
+.archive .projects-section-wrapper .porfolio-project .project-description h3 {
   margin-bottom: 1rem;
   font-size: 1.6rem;
 }
-.home .projects-section-wrapper .porfolio-project .project-description p {
+.home .projects-section-wrapper .porfolio-project .project-description p,
+.archive .projects-section-wrapper .porfolio-project .project-description p {
   padding-top: 1.5rem;
   margin: auto;
   font-size: 1rem;
 }
-.home .projects-section-wrapper .porfolio-project .project-description .project-links {
+.home .projects-section-wrapper .porfolio-project .project-description .project-links,
+.archive .projects-section-wrapper .porfolio-project .project-description .project-links {
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
@@ -442,12 +454,14 @@ main {
   top: 1rem;
   right: 1rem;
 }
-.home .projects-section-wrapper .porfolio-project .project-description .project-links a {
+.home .projects-section-wrapper .porfolio-project .project-description .project-links a,
+.archive .projects-section-wrapper .porfolio-project .project-description .project-links a {
   font-size: 1.4rem;
   color: #f2f2f2;
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
 }
-.home .projects-section-wrapper .porfolio-project .project-tags {
+.home .projects-section-wrapper .porfolio-project .project-tags,
+.archive .projects-section-wrapper .porfolio-project .project-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -456,20 +470,24 @@ main {
   margin: 2rem auto;
   gap: 1rem;
 }
-.home .projects-section-wrapper .porfolio-project .project-tags a {
+.home .projects-section-wrapper .porfolio-project .project-tags a,
+.archive .projects-section-wrapper .porfolio-project .project-tags a {
   background-color: #9fd8f1;
   text-decoration: none;
   color: #1d2941;
   border-radius: 3px;
   padding: 0 0.5rem;
 }
-.home .projects-section-wrapper .entry-thumbnail {
+.home .projects-section-wrapper .entry-thumbnail,
+.archive .projects-section-wrapper .entry-thumbnail {
   text-align: center;
 }
-.home .projects-section-wrapper .entry-thumbnail img {
+.home .projects-section-wrapper .entry-thumbnail img,
+.archive .projects-section-wrapper .entry-thumbnail img {
   max-width: 100%;
 }
-.home .projects-section-wrapper hr {
+.home .projects-section-wrapper hr,
+.archive .projects-section-wrapper hr {
   grid-column: 1/span 2;
   width: 80%;
   height: 1px;
@@ -479,35 +497,42 @@ main {
   box-shadow: 0px 0px 4px 1px #a7f2eb, 0px 0px 7px 2px rgba(242, 242, 242, 0.53);
 }
 @media screen and (min-width: 700px) {
-  .home .projects-section-wrapper {
+  .home .projects-section-wrapper,
+.archive .projects-section-wrapper {
     margin: 8rem 3rem;
   }
-  .home .projects-section-wrapper h2 {
+  .home .projects-section-wrapper h2,
+.archive .projects-section-wrapper h2 {
     font-size: 2rem;
     margin-bottom: 4rem;
   }
-  .home .projects-section-wrapper .porfolio-project {
+  .home .projects-section-wrapper .porfolio-project,
+.archive .projects-section-wrapper .porfolio-project {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     grid-template-rows: auto auto;
     gap: 8px;
     margin-bottom: 6rem;
   }
-  .home .projects-section-wrapper .porfolio-project .project-description {
+  .home .projects-section-wrapper .porfolio-project .project-description,
+.archive .projects-section-wrapper .porfolio-project .project-description {
     position: relative;
     padding: 1.5rem 1rem;
   }
-  .home .projects-section-wrapper .porfolio-project .project-description h3 {
+  .home .projects-section-wrapper .porfolio-project .project-description h3,
+.archive .projects-section-wrapper .porfolio-project .project-description h3 {
     margin-bottom: 1rem;
     font-size: 1.6rem;
   }
-  .home .projects-section-wrapper .porfolio-project .project-description p {
+  .home .projects-section-wrapper .porfolio-project .project-description p,
+.archive .projects-section-wrapper .porfolio-project .project-description p {
     padding-top: 2rem;
     width: 90%;
     margin: auto;
     font-size: 1.2rem;
   }
-  .home .projects-section-wrapper .porfolio-project .project-description .project-links {
+  .home .projects-section-wrapper .porfolio-project .project-description .project-links,
+.archive .projects-section-wrapper .porfolio-project .project-description .project-links {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -517,12 +542,14 @@ main {
     top: 1rem;
     right: 1rem;
   }
-  .home .projects-section-wrapper .porfolio-project .project-description .project-links a {
+  .home .projects-section-wrapper .porfolio-project .project-description .project-links a,
+.archive .projects-section-wrapper .porfolio-project .project-description .project-links a {
     font-size: 1.7rem;
     color: #f2f2f2;
     text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   }
-  .home .projects-section-wrapper .porfolio-project .project-tags {
+  .home .projects-section-wrapper .porfolio-project .project-tags,
+.archive .projects-section-wrapper .porfolio-project .project-tags {
     grid-column: 1/span 2;
     text-align: center;
     display: flex;
@@ -531,19 +558,22 @@ main {
     width: 80%;
     margin: 2rem auto;
   }
-  .home .projects-section-wrapper .porfolio-project .project-tags a {
+  .home .projects-section-wrapper .porfolio-project .project-tags a,
+.archive .projects-section-wrapper .porfolio-project .project-tags a {
     background-color: #9fd8f1;
     text-decoration: none;
     color: #1d2941;
     border-radius: 3px;
     padding: 0 0.5rem;
   }
-  .home .projects-section-wrapper .porfolio-project .entry-thumbnail {
+  .home .projects-section-wrapper .porfolio-project .entry-thumbnail,
+.archive .projects-section-wrapper .porfolio-project .entry-thumbnail {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .home .projects-section-wrapper .porfolio-project .entry-thumbnail img {
+  .home .projects-section-wrapper .porfolio-project .entry-thumbnail img,
+.archive .projects-section-wrapper .porfolio-project .entry-thumbnail img {
     margin: auto;
     max-width: 90%;
     border-radius: 5px;

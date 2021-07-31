@@ -9,6 +9,7 @@ if(is_category()) :
       <?php the_archive_title(); ?>
     </h2>
   </div>
+  
 <?php
 elseif (is_search()):
   ?>
@@ -26,14 +27,16 @@ elseif (is_tag()):
   ?>
   <div class="tag-wrapper">
     <h2 class="tag-title">
-      Tag: 
+       
       <?php single_tag_title(); ?>
     </h2>
   </div>
   <?php
 endif;
 
-
+?>
+<section class="projects-section-wrapper">
+<?php
 $portfolio_project_query = new WP_Query(
     array(
         'post_type' => 'porfolio-project',
@@ -48,5 +51,8 @@ if ( $portfolio_project_query -> have_posts() ) :
 else :
     get_template_part('template-parts/content-none.php');
 endif;
+?>
+</section>
+<?php
 
 get_footer();
