@@ -67,6 +67,9 @@ header .header-wrapper {
   justify-content: space-between;
 
   .hamburger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     color: $color_body_text;
     @include neonShadowText;
