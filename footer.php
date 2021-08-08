@@ -1,5 +1,6 @@
 
 </main>
+    <!-- Footer area -->
     <footer>
         <p>&copy; Samuel Villegas, 2021</p>
         <?php
@@ -14,10 +15,9 @@
         ));
         ?>
     </footer>
+    <!-- Footer area end -->
     </div> 
     <!-- content area -->
-    <!-- Footer area -->
     <?php wp_footer(); ?>
-    <!-- Footer area end -->
 </body>
 </html>
