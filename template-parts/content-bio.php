@@ -10,6 +10,9 @@
     <h4>
       <?php the_field('author_tagline');?>
     </h4>
+    <p>
+      <?php the_excerpt();?>
+    </p>
   </div>
   <div class="entry-thumbnail">
           <img src="<?php the_field('author_pic');?>" alt="">
