@@ -185,6 +185,10 @@ header .header-wrapper .hamburger-menu {
   font-size: 1.6rem;
   margin-right: 1rem;
 }
+header .header-wrapper .hamburger-menu:hover {
+  text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
+  color: #9fd8f1;
+}
 header .header-wrapper .main-menu-wrapper {
   transform: translateX(100%);
   position: fixed;
@@ -210,6 +214,10 @@ header .header-wrapper .main-menu-wrapper i {
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   cursor: pointer;
 }
+header .header-wrapper .main-menu-wrapper i:hover {
+  color: #9fd8f1;
+  text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
+}
 header .header-wrapper .main-menu-wrapper .menu-main-container {
   height: 40%;
 }
@@ -225,6 +233,19 @@ header .header-wrapper .main-menu-wrapper .menu-main-container ul {
 header .header-wrapper .main-menu-wrapper .menu-main-container ul a {
   font-size: 1.5rem;
 }
+header .header-wrapper .main-menu-wrapper .menu-main-container ul a:hover {
+  color: #9fd8f1;
+}
+header .header-wrapper .main-menu-wrapper .menu-main-container ul hr {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 250ms ease-in-out;
+}
+header .header-wrapper .main-menu-wrapper .menu-main-container ul a:hover hr {
+  transform: scaleX(100%);
+  box-shadow: 0px 0px 4px 1px #a7f2eb, 0px 0px 7px 2px rgba(242, 242, 242, 0.53);
+  color: white;
+}
 header .header-wrapper .main-menu-wrapper .header-social-menu {
   width: 30%;
 }
@@ -235,6 +256,10 @@ header .header-wrapper .main-menu-wrapper .header-social-menu ul {
 header .header-wrapper .main-menu-wrapper a {
   color: #f2f2f2;
   text-decoration: none;
+  text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
+}
+header .header-wrapper .main-menu-wrapper a:hover {
+  color: #9fd8f1;
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
 }
 header .header-wrapper .menu-open {

@@ -59,7 +59,8 @@
                         'theme_location' => 'menu-main',
                         'container' => 'nav',
                         'container_class' => 'menu-main-container',
-                        'menu_class' => 'main-menu'
+                        'menu_class' => 'main-menu',
+                        'link_after' => '<hr/>'
                         
                     ));
                 ?>
