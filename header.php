@@ -7,6 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class();?>>
+    <!-- header area -->
     <header>
         <div class="header-wrapper">
             
@@ -78,6 +79,7 @@
         
 
     </header>
+    <!-- header area end -->
     <!-- content area -->
     <div class="content-area" id="primary"> 
         <main id="main" class="site-main">

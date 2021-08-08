@@ -2,6 +2,7 @@
 
 get_header();
 ?>
+<!-- author bio area -->
 <?php
 $author_bio_query = new WP_Query(
     array(
@@ -19,8 +20,9 @@ else :
     get_template_part('template-parts/content-none.php');
 endif;
 ?>
+<!-- author bio area end -->
 
-
+<!-- skills area -->
 <section class="skill-section-wrapper">
     <h2>Technologies</h2>
     <?php
@@ -32,9 +34,9 @@ endif;
             
         ));
     ?>
-
-
 </section>
+<!-- skills area end -->
+<!-- projects area -->
 <section class="projects-section-wrapper">
 
     <h2>My Projects</h2>
@@ -56,6 +58,7 @@ $portfolio_project_query = new WP_Query(
         endif;
         ?>
 </section>
+<!-- projects area end -->
 <?php
 get_footer();
 ?>
