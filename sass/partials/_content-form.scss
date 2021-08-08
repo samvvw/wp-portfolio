@@ -1,0 +1,61 @@
+.page {
+  h2 {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+  label {
+    color: $color_body_text;
+    @include neonShadowText;
+    font-weight: normal;
+  }
+  input,
+  textarea {
+    width: 100% !important;
+    background-color: transparent !important;
+    color: $color_body_text !important;
+  }
+  input {
+    border-style: none !important;
+    border-bottom: 1px solid $color_body_text !important;
+    // @include neonShadowBox;
+  }
+  button {
+    background-color: transparent !important;
+    @include neonShadowText;
+    @include neonShadowBox;
+    font-family: $font_header !important;
+    color: $color_header_text !important;
+    font-weight: normal !important;
+    font-size: 1.4rem;
+    border: 1px $color_body_text solid !important;
+    border-radius: 4px !important;
+  }
+  button:hover {
+    background-color: $color_header_text !important;
+    @include neonShadowText;
+    @include neonShadowBox;
+    font-family: $font_header !important;
+    color: $color_body_bg !important;
+    border-radius: 4px !important;
+  }
+  @media screen and (min-width: $bp_tablet) {
+    .entry-content form {
+      width: 80%;
+      margin: 0 auto;
+      input {
+        max-width: 100% !important;
+      }
+    }
+  }
+  @media screen and (min-width: $bp_desktop) {
+    .entry-content form {
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: $bp_desktop_large) {
+    .entry-content form {
+      width: 40%;
+    }
+  }
+}

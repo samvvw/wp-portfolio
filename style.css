@@ -24,7 +24,8 @@ h3,
 h4,
 h5,
 h6,
-h1 a {
+h1 a,
+label {
   text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
   font-family: "Source Code Pro";
   color: #a7f2eb;
@@ -629,6 +630,65 @@ main {
   font-family: "Font Awesome 5 Brands";
   content: "";
   text-decoration: none;
+}
+
+.page h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+}
+.page label {
+  color: #f2f2f2;
+  text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
+  font-weight: normal;
+}
+.page input,
+.page textarea {
+  width: 100% !important;
+  background-color: transparent !important;
+  color: #f2f2f2 !important;
+}
+.page input {
+  border-style: none !important;
+  border-bottom: 1px solid #f2f2f2 !important;
+}
+.page button {
+  background-color: transparent !important;
+  text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
+  box-shadow: 0px 0px 4px 1px #a7f2eb, 0px 0px 7px 2px rgba(242, 242, 242, 0.53);
+  font-family: "Source Code Pro" !important;
+  color: #a7f2eb !important;
+  font-weight: normal !important;
+  font-size: 1.4rem;
+  border: 1px #f2f2f2 solid !important;
+  border-radius: 4px !important;
+}
+.page button:hover {
+  background-color: #a7f2eb !important;
+  text-shadow: 0px 0px 2px #a7f2eb, 0px 0px 4px rgba(242, 242, 242, 0.53);
+  box-shadow: 0px 0px 4px 1px #a7f2eb, 0px 0px 7px 2px rgba(242, 242, 242, 0.53);
+  font-family: "Source Code Pro" !important;
+  color: #090d0f !important;
+  border-radius: 4px !important;
+}
+@media screen and (min-width: 700px) {
+  .page .entry-content form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .page .entry-content form input {
+    max-width: 100% !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page .entry-content form {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page .entry-content form {
+    width: 40%;
+  }
 }
 
 .skill-section-wrapper {
