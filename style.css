@@ -661,6 +661,17 @@ main {
   text-decoration: none;
 }
 
+.projects-section-wrapper a[href$="demosbysam.com"]::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  text-decoration: none;
+}
+
 .projects-section-wrapper a[href$=".herokuapp.com"]::before {
   display: inline-block;
   font-style: normal;
