@@ -37,20 +37,14 @@ endif;
 ?>
 <section class="projects-section-wrapper">
 <?php
-$portfolio_project_query = new WP_Query(
-    array(
-        'post_type' => 'porfolio-project',
-    )
-);
-
-if ( $portfolio_project_query -> have_posts() ) :
-    while ( $portfolio_project_query -> have_posts() ) :
-        $portfolio_project_query -> the_post();
-        get_template_part('template-parts/content-projects');
-    endwhile;
-else :
-    get_template_part('template-parts/content-none.php');
-endif;
+if ( have_posts() ) :
+  while ( have_posts() ) :
+    the_post();
+    get_template_part('template-parts/content-projects');
+  endwhile;
+  else :
+    get_template_part('template-parts/content-none');
+endif;  
 ?>
 </section>
 <?php

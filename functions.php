@@ -46,3 +46,11 @@ function portfolioTheme(){
 }
 
 add_action('after_setup_theme', 'portfolioTheme');
+
+
+function tg_include_custom_post_types_in_archive_pages( $query ) {
+    if ( $query->is_main_query() && ! is_admin() && ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) ) {
+        $query->set( 'post_type', array( 'porfolio-project' ) );
+    }
+}
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_archive_pages' );
